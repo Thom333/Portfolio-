@@ -238,28 +238,6 @@ export default function PortfolioWebsite() {
       {/* Footer */}
       <footer className="border-t border-gray-800 py-8 text-center text-gray-500">
         © 2026 Thomas Godiya. All rights reserved.
-
-/*
-GITHUB DEPLOYMENT GUIDE
-1. Create a new GitHub repository.
-2. Upload this project files.
-3. Open terminal and run:
-   npm install
-   npm run dev
-4. Push project to GitHub:
-   git init
-   git add .
-   git commit -m "Initial portfolio upload"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/portfolio.git
-   git push -u origin main
-5. Deploy free on Vercel:
-   - Visit https://vercel.com
-   - Login with GitHub
-   - Import your repository
-   - Click Deploy
-6. Your portfolio will be live instantly.
-*/
       </footer>
     </div>
   )

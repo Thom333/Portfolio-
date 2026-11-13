@@ -28,7 +28,7 @@ const education = [
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
-  const currentPage = window.location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home'
+  const currentPage = window.location.pathname.split('/').filter(Boolean)[0] || 'home'
   const pageLinks = [
     ['About', '/about'], ['Expertise', '/expertise'], ['Experience', '/experience'],
     ['Education', '/education'], ['Contact', '/contact'],

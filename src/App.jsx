@@ -95,7 +95,7 @@ function App() {
           <div className="section-wrap"><div className="section-heading"><span className="section-index">04 / EDUCATION</span><h2>Learning is a<br /><em>continuous journey.</em></h2></div><div className="education-list">{education.map((item, i) => <article key={item.school}><span className="education-number">0{i + 1}</span><div><h3>{item.school}</h3><p>{item.qualification}</p></div><span className="education-year">{item.year}</span></article>)}</div></div>
         </section>}
         {currentPage === 'contact' && <section className="contact-section section-wrap" id="contact">
-          <span className="section-index">05 / CONTACT</span><p className="contact-overline">HAVE A PROJECT OR AN OPPORTUNITY?</p><h2>Let's make<br /><em>something work.</em></h2><p className="contact-copy">Have a technology challenge, a project in mind or an opportunity to discuss? I'd be glad to hear from you.</p><a className="button button-primary contact-button" href="mailto:amekuspaul@gmail.com">amekuspaul@gmail.com <span>↗</span></a>
+          <span className="section-index">05 / CONTACT</span><p className="contact-overline">HAVE A PROJECT OR AN OPPORTUNITY?</p><h2>Let's make<br /><em>something work.</em></h2><p className="contact-copy">Have a technology challenge, a project in mind or an opportunity to discuss? I'd be glad to hear from you.</p><a className="button button-primary contact-button" href="mailto:amekuspaul@gmail.com?subject=Portfolio%20Enquiry">amekuspaul@gmail.com <span>↗</span></a>
           <div className="contact-phones" aria-label="Phone numbers">
             <a href="tel:+2348162168555">08162168555</a>
             <a href="tel:+23480879617854">80879617854</a>

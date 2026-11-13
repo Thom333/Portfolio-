@@ -34,6 +34,30 @@ function App() {
     ['Education', '/education'], ['Contact', '/contact'],
   ]
 
+  const hero = (
+    <section className="hero section-wrap" id="home">
+      <div className="hero-copy">
+        <div className="eyebrow"><span className="pulse" /> AVAILABLE FOR OPPORTUNITIES</div>
+        <p className="hero-kicker">IT PROFESSIONAL · WEB DEVELOPER · TECHNOLOGY ENTHUSIAST</p>
+        <h1>Technology that<br /><span>works for people.</span></h1>
+        <p className="hero-intro">I’m Thomas Godiya, an IT professional focused on reliable systems, practical digital solutions and creative technology.</p>
+        <div className="hero-actions">
+          <a className="button button-primary" href="/contact">Let’s connect <span>↗</span></a>
+          <a className="button button-quiet" href="/Thomas-Godiya-CV.pdf" target="_blank" rel="noreferrer">View my CV ↗</a>
+        </div>
+        <div className="hero-meta"><span>IT OPERATIONS</span><span className="meta-line" /><span>WEB DEVELOPMENT</span><span className="meta-line" /><span>CREATIVE TECHNOLOGY</span></div>
+      </div>
+      <div className="hero-art" aria-label="Thomas Godiya monogram illustration">
+        <div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" />
+        <div className="art-core"><span>TG</span><small>THOMAS GODIYA</small></div>
+        <span className="art-tag tag-top">TECHNOLOGY · SYSTEMS · PEOPLE</span>
+        <span className="art-tag tag-bottom">BUILDING WHAT MATTERS</span>
+        <i className="art-dot dot-one" /><i className="art-dot dot-two" /><i className="art-dot dot-three" />
+      </div>
+      <div className="scroll-cue">EXPLORE MY PORTFOLIO <span /></div>
+    </section>
+  )
+
   return (
     <div className="site-shell">
       <header className="topbar">
@@ -76,7 +100,7 @@ function App() {
         </section>}
         {!['home','about','expertise','experience','education','contact'].includes(currentPage) && <section className="content-section section-wrap"><span className="section-index">PAGE NOT FOUND</span><h2>This page isn't here.</h2><a className="button button-primary" href="/">Return home ↗</a></section>}
       </main>
-      <footer className="footer"><a className="brand" href="/"><span className="brand-mark">TG</span><span>THOMAS<span className="brand-light"> GODIYA</span></span></a><span>© {new Date().getFullYear()} Thomas Godiya. All rights reserved.</span><a href="#home" onClick={event => navigateToSection(event, "home")}>BACK TO TOP ↑</a></footer>
+      <footer className="footer"><a className="brand" href="/"><span className="brand-mark">TG</span><span>THOMAS<span className="brand-light"> GODIYA</span></span></a><span>© {new Date().getFullYear()} Thomas Godiya. All rights reserved.</span><a href="/">BACK TO TOP ↑</a></footer>
     </div>
   )
 }

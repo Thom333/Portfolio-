@@ -48,10 +48,18 @@ function App() {
             <h1>Technology that<br /><span>moves ideas forward.</span></h1>
             <p className="hero-intro">I'm Thomas Godiya — an IT professional focused on building dependable technology systems, solving problems and creating useful digital experiences.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="mailto:amekuspaul@gmail.com">Get in touch <span>↗</span></a>
+              <a className="button button-primary" href="#contact">Get in touch <span>↗</span></a>
               <a className="button button-quiet" href="#experience">Explore my work <span>↓</span></a>
               <a className="button button-quiet" href="/Thomas-Godiya-CV.pdf" download="Thomas-Godiya-CV.pdf">Download CV <span>↓</span></a>
             </div>
+            <nav className="hero-section-links" aria-label="Explore portfolio sections">
+              <span>JUMP TO</span>
+              <a href="#about">About</a>
+              <a href="#expertise">Expertise</a>
+              <a href="#experience">Experience</a>
+              <a href="#education">Education</a>
+              <a href="#contact">Contact</a>
+            </nav>
             <div className="hero-meta"><span>BASED IN NIGERIA</span><span className="meta-line" /><span>IT · NETWORKS · DEVELOPMENT</span></div>
           </div>
           <div className="hero-art" aria-label="Abstract technology illustration">

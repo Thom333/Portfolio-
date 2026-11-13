@@ -29,14 +29,23 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
 
+  const navigateToSection = (event, sectionId) => {
+    event.preventDefault()
+    closeMenu()
+    const target = document.getElementById(sectionId)
+    if (!target) return
+    window.history.pushState(null, '', `#${sectionId}`)
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <div className="site-shell">
       <header className="topbar">
-        <a className="brand" href="#home" onClick={closeMenu}><span className="brand-mark">TG</span><span>THOMAS<span className="brand-light"> GODIYA</span></span></a>
+        <a className="brand" href="#home" onClick={event => navigateToSection(event, "home")}><span className="brand-mark">TG</span><span>THOMAS<span className="brand-light"> GODIYA</span></span></a>
         <button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? '×' : '☰'}</button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
-          {['About', 'Expertise', 'Experience', 'Education', 'Contact'].map(item => <a key={item} href={`#${item.toLowerCase()}`} onClick={closeMenu}>{item}</a>)}
-          <a className="nav-cta" href="#contact" onClick={closeMenu}>Let's talk <span>↗</span></a>
+          {['About', 'Expertise', 'Experience', 'Education', 'Contact'].map(item => <a key={item} href={`#${item.toLowerCase()}`} onClick={event => navigateToSection(event, item.toLowerCase())}>{item}</a>)}
+          <a className="nav-cta" href="#contact" onClick={event => navigateToSection(event, "contact")}>Let's talk <span>↗</span></a>
         </nav>
       </header>
 
@@ -48,17 +57,17 @@ function App() {
             <h1>Technology that<br /><span>moves ideas forward.</span></h1>
             <p className="hero-intro">I'm Thomas Godiya — an IT professional focused on building dependable technology systems, solving problems and creating useful digital experiences.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#contact">Get in touch <span>↗</span></a>
-              <a className="button button-quiet" href="#experience">Explore my work <span>↓</span></a>
+              <a className="button button-primary" href="#contact" onClick={event => navigateToSection(event, "contact")}>Get in touch <span>↗</span></a>
+              <a className="button button-quiet" href="#experience" onClick={event => navigateToSection(event, "experience")}>Explore my work <span>↓</span></a>
               <a className="button button-quiet" href="/Thomas-Godiya-CV.pdf" download="Thomas-Godiya-CV.pdf">Download CV <span>↓</span></a>
             </div>
             <nav className="hero-section-links" aria-label="Explore portfolio sections">
               <span>JUMP TO</span>
-              <a href="#about">About</a>
-              <a href="#expertise">Expertise</a>
-              <a href="#experience">Experience</a>
-              <a href="#education">Education</a>
-              <a href="#contact">Contact</a>
+              <a href="#about" onClick={event => navigateToSection(event, "about")}>About</a>
+              <a href="#expertise" onClick={event => navigateToSection(event, "expertise")}>Expertise</a>
+              <a href="#experience" onClick={event => navigateToSection(event, "experience")}>Experience</a>
+              <a href="#education" onClick={event => navigateToSection(event, "education")}>Education</a>
+              <a href="#contact" onClick={event => navigateToSection(event, "contact")}>Contact</a>
             </nav>
             <div className="hero-meta"><span>BASED IN NIGERIA</span><span className="meta-line" /><span>IT · NETWORKS · DEVELOPMENT</span></div>
           </div>
@@ -68,7 +77,7 @@ function App() {
             <div className="art-tag tag-top">SYSTEMS / 01</div><div className="art-tag tag-bottom">BUILD · SUPPORT · IMPROVE</div>
             <div className="art-dot dot-one" /><div className="art-dot dot-two" /><div className="art-dot dot-three" />
           </div>
-          <a className="scroll-cue" href="#about"><span /> SCROLL TO DISCOVER</a>
+          <a className="scroll-cue" href="#about" onClick={event => navigateToSection(event, "about")}><span /> SCROLL TO DISCOVER</a>
         </section>
 
         <section className="intro-strip"><div className="section-wrap strip-inner"><span>MY APPROACH</span><p>Practical thinking. Reliable systems. Human-centred technology.</p></div></section>
@@ -99,7 +108,7 @@ function App() {
           <div className="social-links"><a href="https://www.linkedin.com/in/g-dia-tech-940951241" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Thom333" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.facebook.com/profile.php?id=100091271246866" target="_blank" rel="noreferrer">Facebook ↗</a></div>
         </section>
       </main>
-      <footer className="footer"><a className="brand" href="#home"><span className="brand-mark">TG</span><span>THOMAS<span className="brand-light"> GODIYA</span></span></a><span>© {new Date().getFullYear()} Thomas Godiya. All rights reserved.</span><a href="#home">BACK TO TOP ↑</a></footer>
+      <footer className="footer"><a className="brand" href="#home" onClick={event => navigateToSection(event, "home")}><span className="brand-mark">TG</span><span>THOMAS<span className="brand-light"> GODIYA</span></span></a><span>© {new Date().getFullYear()} Thomas Godiya. All rights reserved.</span><a href="#home" onClick={event => navigateToSection(event, "home")}>BACK TO TOP ↑</a></footer>
     </div>
   )
 }

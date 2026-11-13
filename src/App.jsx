@@ -50,6 +50,7 @@ function App() {
             <div className="hero-actions">
               <a className="button button-primary" href="mailto:amekuspaul@gmail.com">Get in touch <span>↗</span></a>
               <a className="button button-quiet" href="#experience">Explore my work <span>↓</span></a>
+              <a className="button button-quiet" href="/Thomas-Godiya-CV.pdf" download="Thomas-Godiya-CV.pdf">Download CV <span>↓</span></a>
             </div>
             <div className="hero-meta"><span>BASED IN NIGERIA</span><span className="meta-line" /><span>IT · NETWORKS · DEVELOPMENT</span></div>
           </div>

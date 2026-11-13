@@ -47,9 +47,9 @@ function App() {
         </div>
         <div className="hero-meta"><span>IT OPERATIONS</span><span className="meta-line" /><span>WEB DEVELOPMENT</span><span className="meta-line" /><span>CREATIVE TECHNOLOGY</span></div>
       </div>
-      <div className="hero-art" aria-label="Thomas Godiya monogram illustration">
-        <div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" />
-        <div className="art-core"><span>TG</span><small>THOMAS GODIYA</small></div>
+      <div className="hero-art profile-art">
+        <div className="profile-orbit profile-orbit-one" /><div className="profile-orbit profile-orbit-two" />
+        <div className="profile-photo-frame"><img src="/thomas-godiya-profile.jpg" alt="Portrait of Thomas Godiya" /></div>
         <span className="art-tag tag-top">TECHNOLOGY · SYSTEMS · PEOPLE</span>
         <span className="art-tag tag-bottom">BUILDING WHAT MATTERS</span>
         <i className="art-dot dot-one" /><i className="art-dot dot-two" /><i className="art-dot dot-three" />

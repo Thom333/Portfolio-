@@ -36,7 +36,7 @@ function App() {
         <button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? '×' : '☰'}</button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
           {['About', 'Expertise', 'Experience', 'Education', 'Contact'].map(item => <a key={item} href={`#${item.toLowerCase()}`} onClick={closeMenu}>{item}</a>)}
-          <a className="nav-cta" href="mailto:amekuspaul@gmail.com" onClick={closeMenu}>Let's talk <span>↗</span></a>
+          <a className="nav-cta" href="#contact" onClick={closeMenu}>Let's talk <span>↗</span></a>
         </nav>
       </header>
 

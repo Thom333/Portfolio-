@@ -96,6 +96,10 @@ function App() {
         </section>}
         {currentPage === 'contact' && <section className="contact-section section-wrap" id="contact">
           <span className="section-index">05 / CONTACT</span><p className="contact-overline">HAVE A PROJECT OR AN OPPORTUNITY?</p><h2>Let's make<br /><em>something work.</em></h2><p className="contact-copy">Have a technology challenge, a project in mind or an opportunity to discuss? I'd be glad to hear from you.</p><a className="button button-primary contact-button" href="mailto:amekuspaul@gmail.com">amekuspaul@gmail.com <span>↗</span></a>
+          <div className="contact-phones" aria-label="Phone numbers">
+            <a href="tel:+2348162168555">08162168555</a>
+            <a href="tel:+23480879617854">80879617854</a>
+          </div>
           <div className="social-links"><a href="https://www.linkedin.com/in/g-dia-tech-940951241" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Thom333" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.facebook.com/profile.php?id=100091271246866" target="_blank" rel="noreferrer">Facebook ↗</a></div>
         </section>}
         {!['home','about','expertise','experience','education','contact'].includes(currentPage) && <section className="content-section section-wrap"><span className="section-index">PAGE NOT FOUND</span><h2>This page isn't here.</h2><a className="button button-primary" href="/">Return home ↗</a></section>}
